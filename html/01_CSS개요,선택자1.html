@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_CSS 개요, 선택자 1</title>
+  <style>
+    /* 모든 li 태그 선택 */
+    li{
+      font-weight: bold; 
+      font-style: italic;
+    }
+    /* id(#) 선택자 */
+    #test1{
+      color:violet; /* 글자 색 변경 */
+    }
+    #test2{
+      font-size: 24px; /* 글자 크기 변경 */
+    }
+    #test3{
+      font-family: '궁서체'; /* 글꼴 변경 */
+    }
+    /* class(.) 선택자 */
+    .important{
+      color: red; /* 글자 색 */
+      font-size: 20px; /* 글자 크기 */
+      text-decoration: underline; /* 밑 줄 추가 */
+    }
+    /* 미리 CSS 코드를 작성한 후 HTML 요소 만들기 */
+    .bg-red{background-color: red;}
+    .bg-yellow{background-color: yellow;}
+    .bg-pink{background-color: pink;}
+    .bg-green{background-color: green;}
+    .bg-gray{background-color: gray;}
+    /* 모든 요소(*) 선택자 */
+    *{font-family: '궁서체';}
+  </style>
+</head>
+<body>
+  <h1>CSS(Cascading Style Sheets)</h1>
+  <pre>
+    Cascading : 종속, 여러 단으로 된 폭포
+    * 마크업 언어(HTML)가 실제 화면에 표시되는 방법을 기술한 언어
+    * 하나의 요소에 여러 CSS 코드를 겹쳐서 원하는 스타일을 표시
+  </pre>
+  <hr>
+  <pre>
+    [용어 정리]
+    id(식별자) 속성
+    - 하나의 HTML 파일 내에 하나만 존재할 수 있음(중복 불가능) -> 요소를 구분하는 속성
+    - id를 나타내는 기호 : #
+    class(모임, 학급) 속성
+    - 요소 하나가 여러 클래스에 참여 가능 -> 같은 클래스를 가지는 요소가 존재할 수 있음
+    - class를 나타내는 기호 : .
+  </pre>
+  <hr>
+  <h1>CSS 선택자(Selector)</h1>
+  <pre>
+    - html 파일 내에서 스타일을 적용하고 싶은 요소를 선택하는 방법
+  </pre>
+  <h3>태그 선택자</h3>
+  <pre>
+    - 같은 태그를 모두 찾아서 선택
+    [작성법]
+    태그명{CSS코드;}
+  </pre>
+  <ul>
+    <li>테스트1</li>
+    <li>테스트2</li>
+    <li>테스트3</li>
+    <li>테스트4</li>
+    <li>테스트5</li>
+  </ul>
+  <hr>
+  <h3>id(#) 선택자</h3>
+  <pre>
+    - HTML 문서 내에 같은 id를 가지는 요소를 선택
+    [작성법]
+    #id속성값{CSS코드;}
+  </pre>
+  <ul>
+    <li id="test1">테스트1</li>
+    <li id="test2">테스트2</li>
+    <li id="test3">테스트3</li>
+  </ul>
+  <hr>
+  <h3>class(.) 선택자</h3>
+  <pre>
+    - HTML 문서 내에 같은 class 속성 값을 가지는 요소를 모두 선택
+    [작성법]
+    .class속성값{CSS코드;}
+  </pre>
+  <!-- 클래스는 띄어쓰기 단위로 여러 개 작성이 가능함 -->
+  <p class="important bg-yellow">중요한 내용!!!</p>
+  <p class="bg-pink">그저 그런 내용...</p>
+  <p class="important bg-gray">중요한 내용!!!</p>
+  <hr>
+  <h3>모든 요소(*, Asterisk) 선택자</h3>
+  <pre>
+    1. 단독 사용법
+    - 현재 페이지의 모든 요소 선택
+    2. 다른 선택자와 혼용 사용법
+    - 선택된 요소의 모든 자식/후손/형제를 선택
+  </pre>
+
+</body>
+</html>

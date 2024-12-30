@@ -1,0 +1,47 @@
+/* 일반 구조 선택자(위치 기준) */
+/* :first-child -> 첫번째 위치한 요소가 맞으면 선택 */
+#test1>p:first-child{
+  background-color: red;
+  color: white;
+}
+/* :last-child -> 마지막에 위치한 요소가 맞으면 선택 */
+#test1>p:last-child{
+  background-color: blue;
+  color: white;
+}
+/* :nth-child(n) -> n번째 위치한 요소가 맞으면 선택 */
+/* #test1 요소의 자식 중 3번째 위치한 요소가 p태그가 맞을 때 선택 */
+#test1>p:nth-child(3){
+  background-color: green;
+  color: white;
+}
+/* 수열 활용, n == 0 이상의 양의 정수 */
+#test1>p:nth-child(2n){
+  background-color: orange;
+  color: white;
+}
+/* :nth-last-child(n) -> 뒤에서 n번째 위치한 요소가 맞으면 선택 */
+#test1>p:nth-last-child(4){
+  font-size: 28px;
+}
+/* 형태 구조 선택자 */
+/* :first-of-type -> 선택된 형제 요소 중 첫번째 선택 */
+#test2>p:first-of-type{
+  background-color: yellowgreen;
+}
+/* :last-of-type -> 선택된 형제 요소 중 마지막 선택 */
+#test2>p:last-of-type{
+  background-color: skyblue;
+}
+/* 0부터 시작하기 때문에 2n+1도 같은 결과 */
+#test2>p:nth-of-type(2n-1){
+  font-size: 28px;
+  font-weight: bold;
+}
+#test2>p:nth-last-of-type(2){
+  background-color: hotpink;
+}
+/* 부정 선택자(:not()) */
+#test3>li:not(:nth-child(3n)){
+  background-color: pink;
+}
