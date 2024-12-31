@@ -1,0 +1,133 @@
+@font-face { /* 웹 폰트 */
+  font-family: 'SF_HambakSnow';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+*{
+  box-sizing: border-box;
+  /* HTML 요소는 기본적으로 설정된 padding, margin이 있는 요소가 존재 */
+  /* 개발자 의도대로 요소 배치가 안되는 문제가 생김 -> 0으로 초기화 */
+  padding: 0;
+  margin: 0;
+}
+div{
+  border: 1px solid black;
+}
+/* 감싸는 요소 */
+.container-1{
+  width: 304px;
+  height: 304px;
+  border: 2px solid red;
+  margin: 30px;
+  border-radius: 50%;
+  /* 내부 앱솔루트 요소의 기준 */
+  position: relative;
+}
+.container-1>div{
+  border-radius: 50%;
+}
+.container-1>:nth-child(1){
+  width: 75%;
+  height: 75%;
+  background-color: skyblue;
+  position: absolute;
+  top: 12.5%;
+  left: 12.5%;
+}
+.container-1>:nth-child(2){
+  width: 50%;
+  height: 50%;
+  background-color: red;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+.container-1>:nth-child(3){
+  width: 25%;
+  height: 25%;
+  background-color: yellow;
+  position: absolute;
+  top: 37.5%;
+  left: 37.5%;
+}
+/* z-index 확인 */
+.container-2{
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+.container-2>div:nth-child(1){
+  background-color: red;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  z-index: 4;
+}
+.container-2>div:nth-child(2){
+  background-color: orange;
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  z-index: 3;
+  right: 0;
+}
+.container-2>div:nth-child(3){
+  background-color: yellow;
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+}
+.container-2>div:nth-child(4){
+  background-color: green;
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+}
+html{scroll-behavior: smooth;}
+/* 버튼 */
+.top-btn-container{
+  border: 3px solid black;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+  z-index: 5;
+  background-color: white;
+}
+.top-btn-container:active{
+  transform: scale(0.95); 
+}
+.top-btn{
+  color: black;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'SF_HambakSnow';
+  /* 줄 간격보다 글자 크기가 작으면 세로 가운데 배치 */
+  line-height: 47px;
+}
+.top-btn:active{
+  transform: scale(0.95); 
+}
+.sticky{
+  background-color: purple;
+  color: white;
+  font-weight: bold;
+  padding: 100px 20px 30px;
+  position: sticky;
+  top: -70px;
+  z-index: 10;
+  font-family: 'SF_HambakSnow';
+}
